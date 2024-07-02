@@ -1,48 +1,39 @@
-import { Box, HStack, Image, Input, Text, useBreakpointValue, Spacer } from "@chakra-ui/react";
+import { Box, HStack, Image, Input, Text, useBreakpointValue, Spacer, Flex, ButtonGroup, Button, VStack } from "@chakra-ui/react";
+import { CiSearch } from "react-icons/ci";
+import photo from "../../assets/SectionBanner/logo.png"
 
 const Headers = () => {
     // Use useBreakpointValue to conditionally render elements
     const showMenu = useBreakpointValue({ base: false, md: true });
 
     return (
-        <Box w="100%" maxW="100%" mx="auto" px={["2", "12"]} my={["15px", "5px"]} >
-            <HStack>
-                {/* Image */}
-                <Box w={["30%", "10%"]} h='40px'>
-                    <Image
-
-                        mx={["5px", "10px"]}
-
-
-                        boxSize='50px'
-                        src='https://static.vecteezy.com/system/resources/thumbnails/011/883/296/small/modern-graphic-leaf-abstrack-with-water-drop-colorful-logo-good-for-technology-logo-fruits-logo-fresh-logo-nature-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg'
-                        alt='Dan Abramov'
-                    />
+        <Box h={"80px"} boxShadow='dark-lg' p='2' rounded='md' bg='white'>
+            <Flex minWidth='max-content' alignItems='center' gap='2'>
+                <Box>
+                    <Image w={"100px"} mx={"50px"} src={photo} />
                 </Box>
+                <Spacer />
+                <HStack>
+                    <Box><HStack gap={[2, 7]}
+                    >
+                        <Text >Home</Text>
+                        <Text>About</Text>
+                        <Text>Products</Text>
+                        <Text >Business Segments</Text>
+                        <Text>Contact</Text>
+                    </HStack></Box>
+                    <Box w={["100%", "25%"]} h='40px' mx={"20px"} borderRadius={"40px"}>
 
-                {/* Spacer to push the search bar to the right */}
+
+                        <Input borderRadius={"20px"} h={["30px", "30px"]} my={"5px"} type="text" color={'black'} placeholder="Search.." />
 
 
-                {/* Search Bar */}
-
-
-                {/* Navigation Menu */}
-                {showMenu && (
-                    <Box w="60%" h='40px' >
-                        <HStack gap={[2, 20]} mx={"200px"} >
-                            <Text >Home</Text>
-                            <Text>About</Text>
-                            <Text>Services</Text>
-                            <Text>Contact</Text>
-                        </HStack>
                     </Box>
-                )}
+                </HStack>
+            </Flex>
 
-                <Box w={["100%", "30%"]} h='40px'>
-                    <Input h={["30px", "30px"]} my={"5px"} type="text" color={'black'} placeholder="Search.." />
-                </Box>
-            </HStack>
         </Box>
+
     );
 }
 

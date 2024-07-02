@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "Client",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -17,6 +17,7 @@
     "framer-motion": "^11.2.12",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1"
   },

@@ -1,16 +1,17 @@
 import { Box, Button, HStack, Image, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
-
+import photo from "../../assets/SectionBanner/banner.jpg"
+import { LuChevronRightCircle } from "react-icons/lu";
 const AboutUs = () => {
     return (
-        <Box >
+        <Box w="100%" maxW="100%" mx="auto" px={["2", "12"]} my={["15px", "5px"]}>
 
             <Box w={"100%"} >
                 <HStack  >
 
 
                     <Box w="50%" h='500px' maxW={["100%"]} mx="auto" px={["2", "12"]} my={["15px", "20px"]} >
-                        <Image w={"100%"} borderRadius={"10px"} h={"500px"} src='https://iowaagliteracy.wordpress.com/wp-content/uploads/2017/11/spraying-corn.jpg?w=640' alt='Dan Abramov' />
+                        <Image w={"100%"} borderRadius={"10px"} h={"500px"} src={photo} />
                     </Box>
                     <Box w="50%" h='500px' maxW={["100%"]} mx="auto" px={["2", "12"]} my={["15px", "20px"]}>
                         <VStack>
@@ -37,8 +38,9 @@ const AboutUs = () => {
                                     a few sentences should be organized into paragraphs. </Text>
                             </Box>
                             <Box h='30px' w={"100%"} >
-                                <Button colorScheme='teal' size='xs'>
-                                    Button
+                                <Button my={"10px"} color={"#E7F0DC"} borderRadius={"40px"} w={"35%"} bg={"#597445"} size='md'>
+                                    Read More...
+                                    <Box mx={"20px"}><LuChevronRightCircle /></Box>
                                 </Button>
                             </Box>
 
@@ -47,10 +49,10 @@ const AboutUs = () => {
                     </Box>
 
                 </HStack>
-            </Box>
+            </Box >
 
 
-        </Box>
+        </Box >
     )
 }
 

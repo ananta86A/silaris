@@ -9,6 +9,9 @@ import MidBanner from './Component/HomePageComponent/MidBanner'
 import AboutUs from './Component/HomePageComponent/AboutUs'
 import Specialize from './Component/HomePageComponent/Specialize'
 import HeaderMenu from './Component/Header/HeaderMenu'
+import Footers from './Component/footer/Footers'
+import Contact from './Pages/Contact'
+
 
 
 function App() {
@@ -16,12 +19,15 @@ function App() {
 
   return (
     <>
+      {/* <Contact /> */}
       <HeaderMenu />
       <Headers />
       <TopBanner />
       <MidBanner />
       <AboutUs />
       <Specialize />
+      <Footers />
+
 
     </>
   )

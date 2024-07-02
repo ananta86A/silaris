@@ -11,7 +11,7 @@ const HeaderMenu = () => {
     }
 
     return (
-        <Box>
+        <Box >
             <IconButton
                 icon={<HamburgerIcon />}
                 onClick={onOpen}
