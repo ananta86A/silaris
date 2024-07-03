@@ -49,7 +49,7 @@ const Headers = () => {
                     <HStack>
                         <HStack gap={["2", "7"]}>
                             <Text _hover={{ color: "red " }}>Home</Text>
-                            <Text _hover={{ color: "red " }}>About</Text>
+                            <Link to='/aboutus'><Text _hover={{ color: "red " }}>About</Text></Link>
                             <Text _hover={{ color: "red " }}>Products</Text>
                             <Text _hover={{ color: "red " }}>Business Segments</Text>
                             <Link to='/contact'>     <Text _hover={{ color: "red " }}>Contact</Text></Link>

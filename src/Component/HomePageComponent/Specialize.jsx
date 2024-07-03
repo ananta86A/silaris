@@ -21,7 +21,7 @@ const Specialize = () => {
                                 We Specialize in:
                             </Text>
                         </Box>
-                        <Grid templateColumns={["repeat(3, 1fr)", "repeat(6, 1fr)"]} fontFamily={"inter"} gap={[2, 4]} w="100%" px={[2, 5]}>
+                        <Grid templateColumns={["repeat(3, 1fr)", "repeat(6, 1fr)"]} color={"white"} fontFamily={"inter"} gap={[2, 4]} w="100%" px={[2, 5]}>
                             {[
                                 { src: photo1, text: "Specialized commodity trading and sourcing." },
                                 { src: photo2, text: "Purees and Concentrates" },
@@ -49,57 +49,54 @@ const Specialize = () => {
 
                 {/* Banner Section */}
                 <Flex
-                    my={["-6", "-8"]}
-
+                    my={["-6", "-8"]} // Adjusts top and bottom margins for different screen sizes
                     justifyContent="center"
                     alignItems="center"
-                    w="100%"
-                    h={["320px", "900px"]}
-                    bgImage={`url(${photo})`}
+                    w="100%" // Full width
+                    h={["320px", "900px"]} // Height adjusted for mobile and larger screens
+                    bgImage={`url(${photo})`} // Dynamic background image
                     bgSize="cover"
                     bgPosition="center"
                     bgRepeat="no-repeat"
                 >
                     <VStack
-                        spacing={[2, 4]}
-                        w={["90%", "50%"]}
+                        spacing={[2, 4]} // Adjust spacing between children elements for different screen sizes
+                        w={["90%", "50%"]} // Width adjusted for mobile and larger screens
                         textAlign="center"
-                        p={[4, 0]}
+                        p={[4, 0]} // Padding for mobile and larger screens
                     >
                         <Text
                             fontWeight="bold"
-                            fontSize={["20px", "36px"]}
+                            fontSize={["20px", "36px"]} // Font size adjusted for mobile and larger screens
                             color="black"
-                            fontFamily={"inter"}
+                            fontFamily={"inter"} // Font family
                         >
                             So many choices, so much to smile about
                         </Text>
                         <Text
-                            fontSize={["14px", "20px"]}
+                            fontSize={["14px", "20px"]} // Font size adjusted for mobile and larger screens
                             color="black"
-                            fontFamily={"inter"}
+                            fontFamily={"inter"} // Font family
                         >
                             Discover more about our products, their nutrition information and where to buy.
                         </Text>
                         <Button
-                            h={"50px"}
+                            h={"50px"} // Fixed height
                             mt={2}
-                            borderRadius="40px"
-                            w={["70%", "215px"]}
-                            bg={"#597445"}
-                            color={"white"}
-                            size="md"
-
-                            gap={"25px"}
-
-
-                            rightIcon={<LuChevronRightCircle />}
-                            fontFamily={"inter"}
+                            borderRadius="40px" // Rounded corners
+                            w={["70%", "215px"]} // Width adjusted for mobile and larger screens
+                            bg={"#597445"} // Background color
+                            color={"white"} // Text color
+                            size="md" // Button size
+                            gap={"25px"} // Gap between text and icon
+                            rightIcon={<LuChevronRightCircle />} // Icon to the right of the text
+                            fontFamily={"inter"} // Font family
                         >
                             Explore categories
                         </Button>
                     </VStack>
                 </Flex>
+
 
 
             </VStack>
