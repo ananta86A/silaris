@@ -1,13 +1,27 @@
 import { Box, Button, HStack, Image, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
 import photo from "../../assets/SectionBanner/topbanner.jpg"
+import photo1 from "../../assets/SectionBanner/img1.jpg"
+import photo2 from "../../assets/SectionBanner/img2.jpg"
+import photo3 from "../../assets/SectionBanner/img3.jpg"
 import { LuChevronRightCircle } from "react-icons/lu";
 import { FaPlayCircle } from "react-icons/fa";
 
 const TopBanner = () => {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true,
+    };
     return (
         <Box>
             <VStack spacing={4}>
+
                 <Box w={"100%"} my={["20px", "5px"]}>
                     <Image w={"100%"} h={["200px", "500px"]} src={photo} />
                 </Box>

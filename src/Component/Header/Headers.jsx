@@ -101,7 +101,7 @@ const Headers = () => {
                             <Text onClick={onClose}>Products</Text>
                             <Text onClick={onClose}>Business Segments</Text>
 
-                            {/* <Text onClick={onClose1}>Contact</Text> */}
+                            <Text onClick={onClose1}>Contact</Text>
 
                         </VStack>
                     </DrawerBody>
