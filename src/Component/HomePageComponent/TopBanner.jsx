@@ -3,64 +3,66 @@ import React from 'react'
 import photo from "../../assets/SectionBanner/topbanner.jpg"
 import { LuChevronRightCircle } from "react-icons/lu";
 import { FaPlayCircle } from "react-icons/fa";
+
 const TopBanner = () => {
     return (
-        <Box w="100%" maxW="100%" mx="auto" px={["2", "12"]} my={["15px", "5px"]}  >
-            <VStack >
-                <Box w={"100%"}>
-                    <Image w={"100%"} h={"auto"} src={photo} />
+        <Box>
+            <VStack spacing={4}>
+                <Box w={"100%"} my={["20px", "5px"]}>
+                    <Image w={"100%"} h={["200px", "500px"]} src={photo} />
                 </Box>
 
-                <Box w={"100%"} >
-                    <HStack  >
-
-                        <Box w="50%" h='500px' maxW={["100%"]} mx="auto" px={["2", "12"]} my={["15px", "20px"]}>
-                            <VStack>
-
-                                <Box w={"100%"} >
+                <Box w={"100%"}>
+                    <VStack spacing={4} px={4}>
+                        <HStack w={"100%"} spacing={4} flexDirection={["column", "row"]}>
+                            <Box w={["100%", "50%"]} h='auto' maxW={["100%", "50%"]} mx="auto">
+                                <VStack spacing={4} align="start" w="100%">
                                     <HStack>
-                                        <Box><FaPlayCircle /></Box>
-                                        <Box fontWeight={600} fontSize={"20px"}>Community IMPACT</Box>
+                                        <FaPlayCircle />
+                                        <Text fontFamily={"inter"} fontWeight={600} fontSize={["16px", "20px"]}>Community IMPACT</Text>
                                     </HStack>
 
-                                </Box>
-                                <Box h='30px' w={"100%"} >
                                     <Text
+                                        fontFamily={"inter"}
                                         fontWeight={"600"}
                                         fontSize={["15px", "30px"]}
-                                        color={"Green"}>
-                                        How Phrase inspired</Text>
-                                </Box>
-                                <Box h='350px' w={"100%"} my={["2px", "10px"]}>
-                                    <Text fontSize={["10px", "16px"]}>A paragraph is a series of sentences that are organized and coherent, and are all
-                                        related to a single topic. Almost every piece of writing you do that is longer than
-                                        a few sentences should be organized into paragraphs. This is because paragraphs show
-                                        a reader where the subdivisions of an essay begin and end, and thus help the reader see
-                                        the organization of the essay and grasp its main points.
-                                        A paragraph is a series of sentences that are organized and coherent, and are all
-                                        related to a single topic. Almost every piece of writing you do that is longer than
-                                        a few sentences should be organized into paragraphs. This is because paragraphs show
-                                        a reader where the subdivisions of an essay begin and end, and thus help the reader see
-                                        the organization of the essay and grasp its main points.
-                                        A paragraph is a series of sentences that are organized and coherent, and are all
-                                        related to a single topic. Almost every piece of writing you do that is longer than
-                                        a few sentences should be organized into paragraphs. </Text>
-                                </Box>
+                                        color={"green"}>
+                                        How Phrase inspired
+                                    </Text>
 
-                                <Box h='30px' w={"100%"} my={"10px"} >
-                                    <Button my={"10px"} color={"#E7F0DC"} borderRadius={"40px"} w={"35%"} bg={"#597445"} size='md'>
+                                    <Text fontSize={["12px", "16px"]} fontFamily={"inter"}>
+                                        A paragraph is a series of sentences that are organized and coherent, and are all
+                                        related to a single topic. Almost every piece of writing you do that is longer than
+                                        a few sentences should be organized into paragraphs. This is because paragraphs show
+                                        a reader where the subdivisions of an essay begin and end, and thus help the reader see
+                                        the organization of the essay and grasp its main points. A paragraph is a series of sentences
+                                        that are organized and coherent, and are all related to a single topic. Almost every piece
+                                        of writing you do that is longer than a few sentences should be organized into paragraphs.
+                                        This is because paragraphs show a reader where the subdivisions of an essay begin and end,
+                                        and thus help the reader see the organization of the essay and grasp its main points.
+                                    </Text>
+
+                                    <Button
+                                        color={"#E7F0DC"}
+                                        borderRadius={"40px"}
+                                        w={"auto"}
+                                        bg={"#597445"}
+                                        size='md'
+                                        fontFamily={"inter"}
+                                    >
                                         Read More...
-                                        <Box mx={"20px"}><LuChevronRightCircle /></Box>
+                                        <Box mx={"10px"}>
+                                            <LuChevronRightCircle />
+                                        </Box>
                                     </Button>
-                                </Box>
-                            </VStack>
+                                </VStack>
+                            </Box>
 
-                        </Box>
-                        <Box w="50%" h='500px' maxW={["100%"]} mx="auto" px={["2", "12"]} my={["15px", "20px"]} >
-                            <Image w={"100%"} borderRadius={"10px"} h={"500px"} src='https://iowaagliteracy.wordpress.com/wp-content/uploads/2017/11/spraying-corn.jpg?w=640' alt='Dan Abramov' />
-                        </Box>
-
-                    </HStack>
+                            <Box w={["100%", "50%"]} maxW={["100%", "50%"]} mx="auto">
+                                <Image w={"100%"} borderRadius={"10px"} h={["200px", "500px"]} src='https://iowaagliteracy.wordpress.com/wp-content/uploads/2017/11/spraying-corn.jpg?w=640' alt='Dan Abramov' />
+                            </Box>
+                        </HStack>
+                    </VStack>
                 </Box>
             </VStack>
         </Box>

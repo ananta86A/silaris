@@ -5,7 +5,7 @@ import { LuChevronRightCircle } from "react-icons/lu";
 
 const MidBanner = () => {
     return (
-        <Box w="100%" maxW="100%" mx="auto" px={["2", "12"]} my={["15px", "5px"]}>
+        <Box>
             <Box>
 
                 <Flex
@@ -22,12 +22,12 @@ const MidBanner = () => {
                 >
                     <Flex align={"center"} w={'60%'} >
                         <VStack color={"white"}>
-                            <Text fontWeight={600} textAlign={"center"} fontSize={"40px"} >Arigzs Positive</Text>
-                            <Text fontWeight={900} textAlign={"center"} fontSize={"54px"}>Building a stronger, more
+                            <Text fontFamily={"inter"} fontWeight={600} textAlign={"center"} fontSize={"40px"} >Arigzs Positive</Text>
+                            <Text fontFamily={"inter"} fontWeight={900} textAlign={"center"} fontSize={"54px"}>Building a stronger, more
                                 sustainable future</Text>
                             <Box>
                                 <HStack>
-                                    <Link fontSize={"25px"} >Our Commitments
+                                    <Link fontFamily={"inter"} fontSize={"25px"} >Our Commitments
 
                                     </Link>
                                     <Box fontSize={"30px"}><LuChevronRightCircle /></Box>
