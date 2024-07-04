@@ -21,14 +21,14 @@ const Specialize = () => {
                                 We Specialize in:
                             </Text>
                         </Box>
-                        <Grid templateColumns={["repeat(3, 1fr)", "repeat(6, 1fr)"]} color={"white"} fontFamily={"inter"} gap={[2, 4]} w="100%" px={[2, 5]}>
+                        <Grid templateColumns={["repeat(3, 1fr)", "repeat(6, 1fr)"]} color={"white"} fontFamily={"inter"} mt={"17px"} gap={[2, 4]} w="100%" px={[2, 5]}>
                             {[
-                                { src: photo8, text: "Specialized commodity trading and sourcing." },
-                                { src: photo9, text: "Purees and Concentrates" },
+                                { src: photo8, text: "Specialized Commodity Trading And Sourcing." },
+                                { src: photo9, text: "Purees And Concentrates" },
                                 { src: photo0, text: "Agrochemicals" },
-                                { src: photo4, text: "Organic Fertilizers and Pesticides" },
+                                { src: photo4, text: "Organic Fertilizers And Pesticides" },
                                 { src: photo5, text: "Chemical Fertilizers" },
-                                { src: photo6, text: "Retail food products." },
+                                { src: photo6, text: "Retail Food Products." },
                             ].map((item, index) => (
                                 <GridItem key={index} w="100%" textAlign="center">
                                     <Image
@@ -71,14 +71,14 @@ const Specialize = () => {
                             color="black"
                             fontFamily={"inter"} // Font family
                         >
-                            So many choices, so much to smile about
+                            So Many Choices, So Much To Smile About
                         </Text>
                         <Text
                             fontSize={["14px", "20px"]} // Font size adjusted for mobile and larger screens
                             color="black"
                             fontFamily={"inter"} // Font family
                         >
-                            Discover more about our products, their nutrition information and where to buy.
+                            Discover More About Our Products, Their Nutrition Information And Where To Buy.
                         </Text>
                         <Button
                             h={"50px"} // Fixed height
@@ -92,7 +92,7 @@ const Specialize = () => {
                             rightIcon={<LuChevronRightCircle />} // Icon to the right of the text
                             fontFamily={"inter"} // Font family
                         >
-                            Explore categories
+                            Explore Categories
                         </Button>
                     </VStack>
                 </Flex>

@@ -16,76 +16,87 @@ import {
     DrawerCloseButton,
     useDisclosure,
     VStack,
+    Menu,
+    MenuButton,
+    MenuList,
+    MenuItem,
+    Button,
 } from "@chakra-ui/react";
-import { CiSearch } from "react-icons/ci";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import photo from "../../assets/SectionBanner/logo.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+
 const Headers = () => {
     const isLargeScreen = useBreakpointValue({ base: false, md: true });
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const navigate = useNavigate()
-    const onClose1 = () => {
-        navigate('contact')
-        console.log("skdfjsdf")
-    }
+    const navigate = useNavigate();
+
+    const handleNavigate = (path) => {
+        navigate(path);
+        onClose();
+    };
 
     return (
         <Box
-            h={"80px"}
+            h="80px"
             boxShadow="dark-lg"
             rounded="md"
             bg="white"
             my={["5px", "0px"]}
-
+            position="sticky"
+            top="0"
+            zIndex="sticky"
+            px={["10px", "50px"]}
         >
-            <Flex alignItems="center" gap="2">
+            <Flex alignItems="center" gap="2" h="100%">
                 <Box>
-                    <Image w={"100px"} mx={["10px", "50px"]} src={photo} />
+                    <Image w="100px" src={photo} alt="Logo" />
                 </Box>
                 <Spacer />
                 {isLargeScreen ? (
-                    <HStack>
-                        <HStack gap={["2", "7"]}>
-                            <Text _hover={{ color: "red " }}>Home</Text>
-                            <Link to='/aboutus'><Text _hover={{ color: "red " }}>About</Text></Link>
-                            <Text _hover={{ color: "red " }}>Products</Text>
-                            <Text _hover={{ color: "red " }}>Business Segments</Text>
-                            <Link to='/contact'>     <Text _hover={{ color: "red " }}>Contact</Text></Link>
-                        </HStack>
-                        <Box w={["100%", "25%"]} h="40px" mx={["5px", "20px"]} borderRadius="40px">
+                    <HStack gap="7" alignItems="center">
+                        <Link to='/'><Text _hover={{ color: "red" }} color={"#000000"}>Home</Text></Link>
+                        <Link to='aboutus'><Text _hover={{ color: "red" }} color={"#000000"}>About</Text></Link>
+                        <Link to='destop'><Text _hover={{ color: "red" }} color={"#000000"}>Products</Text></Link>
+                        <Menu>
+
+                            <MenuButton variant="link" color={"#000000"} _hover={{ textDecoration: "none", color: "red" }}>
+                                Business Segments<ChevronDownIcon fontSize={"20px"} />
+                            </MenuButton>
+                            <MenuList>
+                                <Link to='/segment1'><MenuItem>Segment 1</MenuItem></Link>
+                                <Link to='/segment2'><MenuItem>Segment 2</MenuItem></Link>
+                                <Link to='/segment3'><MenuItem>Segment 3</MenuItem></Link>
+                            </MenuList>
+                        </Menu>
+                        <Link to='/contact'><Text _hover={{ color: "red" }}>Contact</Text></Link>
+                        <Box w="250px" h="40px">
                             <Input
                                 borderRadius="20px"
                                 h="30px"
-                                my="5px"
                                 type="text"
                                 color="black"
-                                placeholder="Search.."
+                                placeholder="Search..."
                             />
                         </Box>
                     </HStack>
                 ) : (
-                    <Flex alignItems="center">
+                    <Flex alignItems="center" w="100%">
                         <Input
+                            flex="1"
                             borderRadius="20px"
                             h="30px"
                             type="text"
                             color="black"
-                            placeholder="Search.."
+                            placeholder="Search..."
                         />
                         <IconButton
                             aria-label="Open menu"
                             icon={<HamburgerIcon />}
                             onClick={onOpen}
-                            mx="10px"
+                            ml="10px"
                         />
-
-                        {/* <IconButton
-                            aria-label="Search"
-                            icon={<CiSearch />}
-                            onClick={onOpen}
-                        /> */}
                     </Flex>
                 )}
             </Flex>
@@ -97,20 +108,11 @@ const Headers = () => {
                     <DrawerHeader>Menu</DrawerHeader>
                     <DrawerBody>
                         <VStack align="start" spacing="4">
-                            {/* <Input
-                                borderRadius="20px"
-                                h="30px"
-                                type="text"
-                                color="black"
-                                placeholder="Search.."
-                            /> */}
-                            <Text onClick={onClose}>Home</Text>
-                            <Text onClick={onClose}>About</Text>
-                            <Text onClick={onClose}>Products</Text>
-                            <Text onClick={onClose}>Business Segments</Text>
-
-                            <Text onClick={onClose1}>Contact</Text>
-
+                            <Text onClick={() => handleNavigate('/')}>Home</Text>
+                            <Text onClick={() => handleNavigate('/aboutus')}>About</Text>
+                            <Text onClick={() => handleNavigate('/products')}>Products</Text>
+                            <Text onClick={() => handleNavigate('/segment1')}>Business Segments</Text>
+                            <Text onClick={() => handleNavigate('/contact')}>Contact</Text>
                         </VStack>
                     </DrawerBody>
                 </DrawerContent>
