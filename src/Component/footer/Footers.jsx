@@ -39,11 +39,10 @@ const Footers = () => {
         <Box w={{ base: "100%", md: "20%" }} mb={{ base: "20px", md: 0 }} mt={"30px"}>
           <Text fontFamily="Inter" fontSize="20px" fontWeight="600">LEGAL</Text>
           <VStack align="start" spacing={3} mt={"15px"}>
-            <Link href="TermsAndConditions" fontFamily="Inter" fontSize="16px">Terms and Conditions</Link>
-            <Link href="Disclaimer" fontFamily="Inter" fontSize="16px">Disclaimer</Link>
-            <Link href="FAQs" fontFamily="Inter" fontSize="16px">FAQs</Link>
-            <Link href="PrivacyPolicy
-" fontFamily="Inter" fontSize="16px">Privacy Policy</Link>
+            <Link fontFamily="Inter" fontSize="16px">Terms and Conditions</Link>
+            <Link fontFamily="Inter" fontSize="16px">Disclaimer</Link>
+            <Link fontFamily="Inter" fontSize="16px">FAQs</Link>
+            <Link fontFamily="Inter" fontSize="16px">Privacy Policy</Link>
             {/* " fontFamily="Inter" fontSize="16px">Privacy Policy</Link> */}
           </VStack>
         </Box>
@@ -51,8 +50,8 @@ const Footers = () => {
         <Box w={{ base: "100%", md: "40%" }} mt={"30px"}>
           <Text fontFamily="Inter" fontSize="20px" fontWeight="600">COMPANY</Text>
           <VStack align="start" spacing={3} mt={"15px"}>
-            <Link href="aboutus" fontFamily="Inter" fontSize="16px">About Us</Link>
-            <Link href="Partners" fontFamily="Inter" fontSize="16px">Partners</Link>
+            <Link fontFamily="Inter" fontSize="16px">About Us</Link>
+            <Link fontFamily="Inter" fontSize="16px">Partners</Link>
           </VStack>
         </Box>
       </Flex>
