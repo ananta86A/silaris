@@ -50,7 +50,7 @@ const Footers = () => {
         <Box w={{ base: "100%", md: "40%" }} mt={"30px"}>
           <Text fontFamily="Inter" fontSize="20px" fontWeight="600">COMPANY</Text>
           <VStack align="start" spacing={3} mt={"15px"}>
-            <Link href="AboutUs" fontFamily="Inter" fontSize="16px">About Us</Link>
+            <Link href="aboutus" fontFamily="Inter" fontSize="16px">About Us</Link>
             <Link href="Partners" fontFamily="Inter" fontSize="16px">Partners</Link>
           </VStack>
         </Box>
