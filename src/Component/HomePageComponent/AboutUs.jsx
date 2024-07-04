@@ -21,7 +21,7 @@ const AboutUs = () => {
                             <Text
                                 fontWeight="600"
                                 fontSize={["20px", "25px", "35px"]}
-                                color="green"
+                                color="#597445"
                                 fontFamily={"inter"}
                             >
                                 About Us

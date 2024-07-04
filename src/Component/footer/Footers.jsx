@@ -5,14 +5,14 @@ import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 const Footers = () => {
   return (
-    <Box bg="#597445" py="30px" color="white" my={"35px"}>
+    <Box bg="#597445" color="white" >
       <Flex
         direction={{ base: "column", md: "row" }}
         align={{ base: "center", md: "flex-start" }}
         px={{ base: "20px", md: "60px" }}
         w="full"
       >
-        <Box w={{ base: "100%", md: "40%" }} mb={{ base: "20px", md: 0 }}>
+        <Box w={{ base: "100%", md: "40%" }} mb={{ base: "20px", md: 0 }} mt={"30px"}>
           <Text fontFamily="Inter" fontSize="25px" fontWeight="600">
             Manufactured by:
           </Text>
@@ -36,7 +36,7 @@ const Footers = () => {
           </HStack>
         </Box>
 
-        <Box w={{ base: "100%", md: "20%" }} mb={{ base: "20px", md: 0 }}>
+        <Box w={{ base: "100%", md: "20%" }} mb={{ base: "20px", md: 0 }} mt={"30px"}>
           <Text fontFamily="Inter" fontSize="20px" fontWeight="600">LEGAL</Text>
           <VStack align="start" spacing={3}>
             <Link href="#" fontFamily="Inter" fontSize="16px">Terms and Conditions</Link>
@@ -46,7 +46,7 @@ const Footers = () => {
           </VStack>
         </Box>
 
-        <Box w={{ base: "100%", md: "40%" }}>
+        <Box w={{ base: "100%", md: "40%" }} mt={"30px"}>
           <Text fontFamily="Inter" fontSize="20px" fontWeight="600">COMPANY</Text>
           <VStack align="start" spacing={3}>
             <Link href="#" fontFamily="Inter" fontSize="16px">About Us</Link>

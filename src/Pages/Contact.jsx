@@ -1,64 +1,155 @@
-import { Box, Checkbox, Flex, Image, Input, Spacer, Text, Textarea, VStack } from '@chakra-ui/react';
+import {
+    Box,
+    Button,
+    Checkbox,
+    Flex,
+    HStack,
+    Image,
+    Input,
+    Link,
+    Text,
+    Textarea,
+    VStack,
+} from '@chakra-ui/react';
 import React from 'react';
-import photo from "../assets/SectionBanner/contact-banner.png";
-import photo1 from "../assets/SectionBanner/img7.png";
+import photo from '../assets/SectionBanner/contact-banner.png';
+import photo1 from '../assets/SectionBanner/img7.png';
+import photo2 from '../assets/SectionBanner/logo1.png';
+import photo3 from '../assets/SectionBanner/logo2.png';
+import photo4 from '../assets/SectionBanner/logo3.png';
 
 const Contact = () => {
     return (
         <Box>
             {/* Banner Image */}
             <Box>
-                <Image src={photo} />
+                <Image src={photo} w="100%" objectFit="cover" />
             </Box>
 
             {/* Contact Form and Information */}
-            <Flex direction={{ base: "column", md: "row" }} justify="space-between" align="start" mx={{ base: 0, md: "20px" }}>
+            <Flex
+                direction={{ base: 'column', md: 'row' }}
+                justify="space-between"
+                align="start"
+                mx={{ base: 0, md: '20px' }}
+                my={{ base: '20px', md: '40px' }}
+            >
                 {/* Contact Form */}
-                <Box w={{ base: "100%", md: "40%" }} h="auto" maxH="500px">
-                    <Text fontFamily="inter" mx="30px" my="30px" fontSize="25px">We're here to help.</Text>
-                    <Flex direction="column" mx="20px">
-                        <Input placeholder='First Name*' />
-                        <Input placeholder='Last Name*' mt={2} />
-                        <Input placeholder='Email*' mt={2} />
-                        <Textarea placeholder='Message*' mt={2} />
+                <Box w={{ base: '100%', md: '45%' }} maxH="auto">
+                    <Text
+                        fontFamily="inter"
+                        mx={{ base: '10px', md: '30px' }}
+                        my="20px"
+                        fontSize={{ base: '18px', md: '20px' }}
+                        color="#597445"
+                    >
+                        We're Here To Help..
+                    </Text>
+                    <Flex direction="column" mx={{ base: '10px', md: '20px' }}>
+                        <HStack mb="10px">
+                            <Input
+                                borderRadius="13px"
+                                placeholder="First Name*"
+                                w="100%"
+                            />
+                            <Input
+                                borderRadius="13px"
+                                placeholder="Last Name*"
+                                w="100%"
+                            />
+                        </HStack>
+                        <Input
+                            borderRadius="13px"
+                            placeholder="Email*"
+                            my="15px"
+                            w="100%"
+                        />
+                        <Textarea
+                            borderRadius="13px"
+                            placeholder="Message*"
+                            mt={2}
+                            w="100%"
+                        />
                         <Box mt={2}>
-                            <Checkbox />
-                            <Text fontFamily="inter" ml={2}>
-                                By checking this box, I agree to The Silaris Company’s Terms of Service and consent to The Silaris Company’s Privacy Policy.
-                            </Text>
+                            <HStack align="start">
+                                <Checkbox />
+                                <Text fontFamily="inter" fontSize="12px">
+                                    By checking this box, I agree to The Silaris Company’s <Link fontWeight={900}>Terms of Service </Link>and consent to The Silaris Company’s <Link fontWeight={900}>Privacy Policy.</Link>
+                                </Text>
+                            </HStack>
                         </Box>
+                        <Button
+                            bg="#597445"
+                            my="10px"
+                            color="#E7F0DC"
+                            w={{ base: '50%', md: '40%' }}
+                            mx={{ base: '90px', md: '80px' }}
+                            borderRadius="20px"
+                        >
+                            Submit
+                        </Button>
                     </Flex>
                 </Box>
 
                 {/* Contact Information */}
-                <Box w={{ base: "100%", md: "50%" }} h="auto" maxH="500px">
-                    <VStack mx="30px" my="40px" align="start">
-                        <Text fontFamily="inter">Have questions or comments? Reach Coca‑Cola Consumer Care on the phone for any urgent matters. For other questions and concerns, please email or message us below.</Text>
-                        <Box w="100%">
-                            <Text fontFamily="inter" fontWeight={700}>Call</Text>
-                            <Text fontFamily="inter">Consumer Care: +1 800-520-2653</Text>
-                            <Text fontFamily="inter">Coca‑Cola Store: +1 800-557-4616</Text>
-                        </Box>
-                        <Box w="100%" mt={4}>
-                            <Text fontFamily="inter" fontWeight={700}>Email</Text>
-                            <Text fontFamily="inter">Send us an email by filling out this form.</Text>
-                        </Box>
-                        <Box w="100%" mt={4}>
-                            <Text fontFamily="inter" fontWeight={700}>Write To Us</Text>
-                            <Text fontFamily="inter">
-                                Sudarshan Consolidated Private Limited
-                                IGC Samba, Samba Jammu & Kashmir,
-                                Pincode: 184121
-                            </Text>
-                        </Box>
+                <Box w={{ base: '100%', md: '50%' }} mt={{ base: '20px', md: 0 }}>
+                    <VStack mx={{ base: '10px', md: '30px' }} align="start">
+                        <Text
+                            fontFamily="inter"
+                            fontSize="15px"
+                            mb="20px"
+                            textAlign={{ base: 'center', md: 'left' }}
+                        >
+                            Have questions or comments? Reach Coca‑Cola Consumer Care on the phone for any urgent matters. For other questions and concerns, please email or message us below.
+                        </Text>
+                        <HStack w="100%" align="start" spacing="20px">
+                            <Box w="60%">
+                                <Box mb="4">
+                                    <Text fontFamily="inter" fontWeight="700">Call</Text>
+                                    <Text fontFamily="inter">Consumer Care: +1 800-520-2653</Text>
+                                    <Text fontFamily="inter">Coca‑Cola Store: +1 800-557-4616</Text>
+                                </Box>
+                                <Box mb="4">
+                                    <Text fontFamily="inter" fontWeight="700">Email</Text>
+                                    <Text fontFamily="inter">Send us an email by filling out this form.</Text>
+                                </Box>
+                                <Box>
+                                    <Text fontFamily="inter" fontWeight="700">Write To Us</Text>
+                                    <Text my="8px" fontFamily="inter" fontSize="15px">
+                                        Sudarshan Consolidated Private Limited
+                                    </Text>
+                                    <Text my="10px" fontFamily="inter" fontSize="15px">
+                                        IGC Samba, Samba Jammu & Kashmir, Pincode: 184121
+                                    </Text>
+                                </Box>
+                            </Box>
+                            <Box w="40%" h="270px">
+                                <VStack spacing="10px">
+                                    <Box w="100%" textAlign="center">
+                                        <Image mx="auto" h="60px" my="20px" src={photo3} />
+                                    </Box>
+                                    <Box w="100%" textAlign="center">
+                                        <Image mx="auto" h="30px" src={photo4} />
+                                    </Box>
+                                    <Box w="100%" textAlign="center">
+                                        <Image mx="auto" h="200px" src={photo2} />
+                                    </Box>
+                                </VStack>
+                            </Box>
+                        </HStack>
                     </VStack>
                 </Box>
             </Flex>
 
             {/* Additional Section with Background Image */}
-            <Box bgImage={`url(${photo1})`} bgSize="cover" bgPos="center" bgRepeat="no-repeat" h="500px" mt={8} />
+            <Box mt={"6%"}>
+                <iframe style={{ width: "100%", height: "800px" }} src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3363.4283323321315!2d75.10714867444108!3d32.5414118959915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391c195fcc03b383%3A0x2d866086585d539b!2sIGC%20phase%203%20Sidco%20samba%20Jammu%20and%20Kashmir!5e0!3m2!1sen!2sin!4v1720081469057!5m2!1sen!2sin' />
+            </Box>
+
         </Box>
+
+
     );
-}
+};
 
 export default Contact;

@@ -1,11 +1,13 @@
-import { Box, Button, HStack, Image, Text, VStack } from '@chakra-ui/react'
-import React from 'react'
-import photo from "../../assets/SectionBanner/topbanner.jpg"
-import photo1 from "../../assets/SectionBanner/img1.jpg"
-import photo2 from "../../assets/SectionBanner/img2.jpg"
-import photo3 from "../../assets/SectionBanner/img3.jpg"
+import { Box, Button, HStack, Image, Text, VStack } from '@chakra-ui/react';
+import React from 'react';
+import photo1 from "../../assets/SectionBanner/img1.jpg";
+import photo2 from "../../assets/SectionBanner/img2.jpg";
+import photo3 from "../../assets/SectionBanner/img3.jpg";
 import { LuChevronRightCircle } from "react-icons/lu";
 import { FaPlayCircle } from "react-icons/fa";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const TopBanner = () => {
     const settings = {
@@ -18,18 +20,37 @@ const TopBanner = () => {
         autoplaySpeed: 3000,
         arrows: true,
     };
-    return (
-        <Box>
-            <VStack spacing={4}>
 
-                <Box w={"100%"} my={["20px", "5px"]}>
-                    <Image w={"100%"} h={["200px", "500px"]} src={photo} />
+    return (
+        <Box w="100%">
+            <VStack >
+                {/* 
+                <Box mx="auto" w="100%" maxW="1200px" p={{ base: "10px", md: "2px" }}>
+                    <Slider {...settings}>
+                        {[photo1, photo2, photo3].map((photo, index) => (
+                            <Box key={index} w="100%">
+                                <Image
+                                    h={{ base: "200px", md: "400px" }} // Adjust heights for different screens
+                                    w="100%"
+                                    src={photo}
+                                    alt={`Shop Banner ${index + 1}`}
+                                    objectFit="cover"
+                                    objectPosition="center"
+                                />
+                            </Box>
+                        ))}
+                    </Slider>
+                </Box> */}
+                <Box w={"100%"} >
+                    <Image h={["200px", "500px"]} w={"100%"} src={photo1} />
                 </Box>
 
-                <Box w={"100%"}>
+
+
+                <Box w={"100%"} my={"10px"}>
                     <VStack spacing={4} px={4}>
                         <HStack w={"100%"} spacing={4} flexDirection={["column", "row"]}>
-                            <Box w={["100%", "50%"]} h='auto' maxW={["100%", "50%"]} mx="auto">
+                            <Box w={["100%", "50%"]} maxW="100%" mx="auto">
                                 <VStack spacing={4} align="start" w="100%">
                                     <HStack>
                                         <FaPlayCircle />
@@ -40,7 +61,7 @@ const TopBanner = () => {
                                         fontFamily={"inter"}
                                         fontWeight={"600"}
                                         fontSize={["15px", "30px"]}
-                                        color={"green"}>
+                                        color={"#597445"}>
                                         How Phrase inspired
                                     </Text>
 
@@ -72,7 +93,7 @@ const TopBanner = () => {
                                 </VStack>
                             </Box>
 
-                            <Box w={["100%", "50%"]} maxW={["100%", "50%"]} mx="auto">
+                            <Box w={["100%", "50%"]} maxW="100%" mx="auto">
                                 <Image w={"100%"} borderRadius={"10px"} h={["200px", "500px"]} src='https://iowaagliteracy.wordpress.com/wp-content/uploads/2017/11/spraying-corn.jpg?w=640' alt='Dan Abramov' />
                             </Box>
                         </HStack>
@@ -80,7 +101,7 @@ const TopBanner = () => {
                 </Box>
             </VStack>
         </Box>
-    )
+    );
 }
 
-export default TopBanner
+export default TopBanner;

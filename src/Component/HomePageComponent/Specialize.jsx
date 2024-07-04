@@ -2,9 +2,9 @@ import { Box, Button, Flex, Grid, GridItem, Image, Text, VStack } from '@chakra-
 import React from 'react'
 import { LuChevronRightCircle } from "react-icons/lu";
 import photo from "../../assets/SectionBanner/lastbanner.png"
-import photo1 from "../../assets/SectionBanner/logo1.png"
-import photo2 from "../../assets/SectionBanner/logo2.png"
-import photo3 from "../../assets/SectionBanner/logo3.png"
+import photo8 from "../../assets/SectionBanner/logo7.png"
+import photo9 from "../../assets/SectionBanner/logo8.png"
+import photo0 from "../../assets/SectionBanner/logo9.png"
 import photo4 from "../../assets/SectionBanner/logo4.png"
 import photo5 from "../../assets/SectionBanner/logo5.png"
 import photo6 from "../../assets/SectionBanner/logo6.png"
@@ -23,9 +23,9 @@ const Specialize = () => {
                         </Box>
                         <Grid templateColumns={["repeat(3, 1fr)", "repeat(6, 1fr)"]} color={"white"} fontFamily={"inter"} gap={[2, 4]} w="100%" px={[2, 5]}>
                             {[
-                                { src: photo1, text: "Specialized commodity trading and sourcing." },
-                                { src: photo2, text: "Purees and Concentrates" },
-                                { src: photo3, text: "Agrochemicals" },
+                                { src: photo8, text: "Specialized commodity trading and sourcing." },
+                                { src: photo9, text: "Purees and Concentrates" },
+                                { src: photo0, text: "Agrochemicals" },
                                 { src: photo4, text: "Organic Fertilizers and Pesticides" },
                                 { src: photo5, text: "Chemical Fertilizers" },
                                 { src: photo6, text: "Retail food products." },
@@ -33,7 +33,7 @@ const Specialize = () => {
                                 <GridItem key={index} w="100%" textAlign="center">
                                     <Image
                                         borderRadius="full"
-                                        boxSize={["50px", "100px"]}
+                                        boxSize={["50px", "70px"]}
                                         src={item.src}
                                         alt={`Specialize ${index + 1}`}
                                         mx="auto"
@@ -49,11 +49,11 @@ const Specialize = () => {
 
                 {/* Banner Section */}
                 <Flex
-                    my={["-6", "-8"]} // Adjusts top and bottom margins for different screen sizes
+                    // my={["-6", "-8"]} // Adjusts top and bottom margins for different screen sizes
                     justifyContent="center"
                     alignItems="center"
                     w="100%" // Full width
-                    h={["320px", "900px"]} // Height adjusted for mobile and larger screens
+                    h={["320px", "1000px"]} // Height adjusted for mobile and larger screens
                     bgImage={`url(${photo})`} // Dynamic background image
                     bgSize="cover"
                     bgPosition="center"

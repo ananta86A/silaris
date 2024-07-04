@@ -67,17 +67,25 @@ const Headers = () => {
                     </HStack>
                 ) : (
                     <Flex alignItems="center">
+                        <Input
+                            borderRadius="20px"
+                            h="30px"
+                            type="text"
+                            color="black"
+                            placeholder="Search.."
+                        />
                         <IconButton
                             aria-label="Open menu"
                             icon={<HamburgerIcon />}
                             onClick={onOpen}
                             mx="10px"
                         />
-                        <IconButton
+
+                        {/* <IconButton
                             aria-label="Search"
                             icon={<CiSearch />}
                             onClick={onOpen}
-                        />
+                        /> */}
                     </Flex>
                 )}
             </Flex>
@@ -89,13 +97,13 @@ const Headers = () => {
                     <DrawerHeader>Menu</DrawerHeader>
                     <DrawerBody>
                         <VStack align="start" spacing="4">
-                            <Input
+                            {/* <Input
                                 borderRadius="20px"
                                 h="30px"
                                 type="text"
                                 color="black"
                                 placeholder="Search.."
-                            />
+                            /> */}
                             <Text onClick={onClose}>Home</Text>
                             <Text onClick={onClose}>About</Text>
                             <Text onClick={onClose}>Products</Text>
