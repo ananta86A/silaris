@@ -44,6 +44,7 @@ const Footers = () => {
             <Link href="FAQs" fontFamily="Inter" fontSize="16px">FAQs</Link>
             <Link href="PrivacyPolicy
 " fontFamily="Inter" fontSize="16px">Privacy Policy</Link>
+            {/* " fontFamily="Inter" fontSize="16px">Privacy Policy</Link> */}
           </VStack>
         </Box>
 
