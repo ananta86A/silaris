@@ -18,6 +18,9 @@ import photo2 from '../assets/SectionBanner/logo1.png';
 import photo3 from '../assets/SectionBanner/logo2.png';
 import photo4 from '../assets/SectionBanner/logo3.png';
 
+import { LuChevronRightCircle } from "react-icons/lu";
+
+
 const Contact = () => {
     return (
         <Box>
@@ -145,6 +148,53 @@ const Contact = () => {
             <Box mt={"6%"}>
                 <iframe style={{ width: "100%", height: "800px" }} src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3363.4283323321315!2d75.10714867444108!3d32.5414118959915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391c195fcc03b383%3A0x2d866086585d539b!2sIGC%20phase%203%20Sidco%20samba%20Jammu%20and%20Kashmir!5e0!3m2!1sen!2sin!4v1720081469057!5m2!1sen!2sin' />
             </Box>
+            <Box h={{ base: "auto", md: "280px" }} mt="5px" w="100%" bg="#E7F0DC">
+                <HStack
+                    flexWrap={{ base: "wrap", md: "nowrap" }}
+                    justifyContent={{ base: "center", md: "space-between" }}
+                >
+                    {/* Latin America Section */}
+                    <Box w={{ base: "100%", md: "50%" }} p={{ base: "10px", md: "0" }}>
+                        <VStack spacing={4} align="start">
+                            <Text mx={["100px", "200px"]} fontSize="25px" fontWeight="700">Latin America</Text>
+                            <Text fontFamily="inter" fontWeight="500" mx={{ base: "0", md: "70px" }} w="80%">
+                                Over the course of more than 100 years, PepsiCo’s Latin America business has grown to become one of the strongest food and beverage manufacturers in the region by working closely with local entrepreneurs and investing in lasting win-win partnerships with our suppliers and farmers, investors, consumers, and communities.
+                            </Text>
+                            <Button
+                                mx={["100px", "200px"]}
+                                color="#E7F0DC"
+                                borderRadius="40px"
+                                bg="#597445"
+                                size="md"
+                                rightIcon={<LuChevronRightCircle />}
+                            >
+                                Read More...
+                            </Button>
+                        </VStack>
+                    </Box>
+
+                    {/* Europe Section */}
+                    <Box w={{ base: "100%", md: "50%" }} p={{ base: "10px", md: "0" }}>
+                        <VStack spacing={4} align="start">
+                            <Text mx={["100px", "200px"]} fontSize="25px" fontWeight="700">Europe</Text>
+                            <Text fontFamily="inter" fontWeight="500" mx={{ base: "0", md: "70px" }} w="80%">
+                                Over the course of more than 100 years, PepsiCo’s Europe business has grown to become one of the strongest food and beverage manufacturers in the region by working closely with local entrepreneurs and investing in lasting win-win partnerships with our suppliers and farmers, investors, consumers, and communities.
+                            </Text>
+                            <Button
+                                mx={["100px", "200px"]}
+                                color="#E7F0DC"
+                                borderRadius="40px"
+                                bg="#597445"
+                                size="md"
+                                rightIcon={<LuChevronRightCircle />}
+                            >
+                                Read More...
+                            </Button>
+                        </VStack>
+                    </Box>
+                </HStack>
+            </Box>
+
 
         </Box>
 

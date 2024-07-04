@@ -24,8 +24,8 @@ const TopBanner = () => {
     return (
         <Box w="100%">
             <VStack >
-                {/* 
-                <Box mx="auto" w="100%" maxW="1200px" p={{ base: "10px", md: "2px" }}>
+
+                {/* <Box mx="auto" w="100%" maxW="1200px" p={{ base: "10px", md: "2px" }}>
                     <Slider {...settings}>
                         {[photo1, photo2, photo3].map((photo, index) => (
                             <Box key={index} w="100%">
@@ -41,6 +41,7 @@ const TopBanner = () => {
                         ))}
                     </Slider>
                 </Box> */}
+
                 <Box w={"100%"} >
                     <Image h={["200px", "500px"]} w={"100%"} src={photo1} />
                 </Box>
