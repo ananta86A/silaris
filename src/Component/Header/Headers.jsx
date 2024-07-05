@@ -91,7 +91,7 @@ const Headers = () => {
 
                             borderRadius="0"
                             border="none"
-                            borderBottom="2px solid"
+                            borderBottom="2px solid gray"
                             h={["30px", "30px"]}
                             color="black"
                             placeholder="Search..."

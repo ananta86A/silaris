@@ -67,6 +67,7 @@ const Destop = () => {
                                 spacing={4}
                                 align="center"
                             >
+
                                 <Box w={["100%", "50%"]} mx={['auto', '0px']} textAlign="center">
                                     <Text fontFamily="inter" color="#597445" fontSize={["20px", "35px"]}>
                                         Agrizz Beverages North America
