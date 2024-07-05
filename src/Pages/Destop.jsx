@@ -1,4 +1,5 @@
-import { Box, Button, HStack, Image, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Flex, HStack, Image, Text, VStack, } from '@chakra-ui/react'
+
 import React from 'react'
 import photo2 from "../assets/SectionBanner/about-img.png";
 import topdestop from "../assets/SectionBanner/Desktop.png";
@@ -16,7 +17,7 @@ const Destop = () => {
                 {/* Main Content */}
                 <Box w="100%" my={-5}>
                     {/* Section 1 */}
-                    <HStack
+                    {/* <HStack
                         bg="#E7F0DC"
                         h={["auto", "376px"]}
                         direction={["column", "row"]}
@@ -25,15 +26,16 @@ const Destop = () => {
                     >
                         <Box
                             w={["100%", "50%"]}
-                            h="300px"
+                            //h="300px"
                             display="flex"
                             alignItems="center"
                             justifyContent="center"
                             textAlign="center"
+                        //flexDirection={["row", 'row']}
                         >
                             <Text
                                 fontSize={["20px", "32px"]}
-                                width={['auto', '256px']}
+                                width={['80%', '70%']}
                                 fontFamily="inter"
                             >
                                 Global Leader in Convenient Foods and Beverages
@@ -47,33 +49,32 @@ const Destop = () => {
                                 including many iconic brands that generate more than $1 billion each in estimated annual retail sales.
                             </Text>
                         </Box>
-                    </HStack>
+                    </HStack> */}
 
                     {/* Section 2 */}
-                    <VStack w="100%" spacing={5} mb={"70px"}>
-                        <Box w="80%" textAlign="center" my={5} color="#597445">
-                            <Text fontWeight={700} fontFamily="inter" w={"80%"} fontSize={["24px", "40px"]}>
-                                Pepsi-Cola & Frito-Lay, a perfect match since 1965
+                    <VStack w="100%" spacing={5} mb={['35px', '60px']}>
+                        <Box w={['80%', "60%"]} textAlign="center" my={5} color="#597445" py={['0px', '15px']}>
+                            <Text fontWeight={700} fontFamily="inter" w={"100%"} fontSize={["24px", "40px"]}>
+                                Agrizz & Frito-Lay, a perfect match since 1965
                             </Text>
                         </Box>
 
                         {/* PepsiCo Section */}
                         <VStack w="80%" spacing={10}>
-                            <HStack
-                                direction={["column", "row"]}
+                            <Flex
                                 w="100%"
+                                direction={["column", "row"]}
                                 spacing={4}
                                 align="center"
-
                             >
-                                <Box w={["100%", "50%"]} textAlign="center">
-                                    <Text fontFamily="inter" color="#597445" fontSize={["20px", "40px"]}>
-                                        PepsiCo Beverages North America
+                                <Box w={["100%", "50%"]} mx={['auto', '0px']} textAlign="center">
+                                    <Text fontFamily="inter" color="#597445" fontSize={["20px", "35px"]}>
+                                        Agrizz Beverages North America
                                     </Text>
                                     <Text p={[4, 6]} fontFamily="inter" fontSize={["10px", "20px"]}>
-                                        With roots dating back to 1898, PepsiCo Beverages North America (PBNA) is one of the largest beverage companies in North America today, generating more than $27 billion in net revenue in 2023.
+                                        With roots dating back to 1898, Agrizz Beverages North America (PBNA) is one of the largest beverage companies in North America today, generating more than $27 billion in net revenue in 2023.
                                     </Text>
-                                    <Box mx="auto" w="fit-content">
+                                    <Box mx="auto" w="fit-content" pb={["15px", "0px"]}>
                                         <Button
                                             color="#E7F0DC"
                                             borderRadius="40px"
@@ -85,30 +86,30 @@ const Destop = () => {
                                         </Button>
                                     </Box>
                                 </Box>
-                                <Box w={["100%", "52%"]} >
+                                <Box w={["100%", "50%"]} mx="auto" mt={[4, 0]}>
                                     <Image src={photo2} w="100%" />
                                 </Box>
-                            </HStack>
+                            </Flex>
 
                             {/* Frito-Lay Section */}
-                            <HStack
-                                my={"-40px"}
-
-                                direction={["column", "row"]}
+                            <Flex
                                 w="100%"
+                                direction={["column-reverse", "row"]}
                                 spacing={4}
                                 align="center"
+                                my={"-40px"}
+                                mb={'16px'}
                             >
-                                <Box w={["100%", "51%"]} display={["none", "block"]}>
+                                <Box w={["100%", "50%"]} mx="auto" mt={[4, 0]}>
                                     <Image src={photo2} w="100%" />
                                 </Box>
-                                <Box w={["100%", "50%"]} textAlign="center">
-                                    <Text fontFamily="inter" color="#597445" fontSize={["20px", "40px"]}>
+                                <Box w={["100%", "50%"]} mx={['auto', '0px']} textAlign="center" py={['15px', '0px']}>
+                                    <Text fontFamily="inter" color="#597445" fontSize={["20px", "35px"]}>
                                         Frito-Lay North America
                                     </Text>
                                     <Text p={[4, 6]} fontFamily="inter" fontSize={["10px", "20px"]}>
                                         In 1932, Herman W. Lay began a potato chip business in Nashville, Tennessee. Soon after that, he purchased the manufacturer and formed H.W. Lay & Company. In 1961, the company merged with the Frito Company,
-                                        becoming Frito-Lay Inc., and in 1965, Frito-Lay Inc. merged with Pepsi-Cola to form PepsiCo.
+                                        becoming Frito-Lay Inc., and in 1965, Frito-Lay Inc. merged with Agrizz to form PepsiCo.
                                     </Text>
                                     <Box mx="auto" w="fit-content">
                                         <Button
@@ -122,18 +123,11 @@ const Destop = () => {
                                         </Button>
                                     </Box>
                                 </Box>
-                                <Box w={["100%", "50%"]} display={["block", "none"]}>
-                                    <Image src={photo2} w="100%" />
-                                </Box>
-                            </HStack>
+                            </Flex>
                         </VStack>
                     </VStack>
-
                     {/* Background Section */}
-
-
                 </Box>
-
             </VStack>
         </Box>
     )

@@ -1,4 +1,4 @@
-import { Box, Flex, VStack, Text, HStack, Link } from '@chakra-ui/react';
+import { Box, Flex, VStack, Text, HStack, Link, Spacer } from '@chakra-ui/react';
 import React from 'react';
 import "@fontsource/inter";
 import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
@@ -6,6 +6,7 @@ import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 const Footers = () => {
   return (
     <Box bg="#597445" color="white" >
+      <VStack></VStack>
       <Flex
         direction={{ base: "column", md: "row" }}
         align={{ base: "center", md: "flex-start" }}
@@ -13,21 +14,28 @@ const Footers = () => {
         w="full"
       >
         <Box w={{ base: "100%", md: "40%" }} mb={{ base: "20px", md: 0 }} mt={"30px"}>
-          <Text fontFamily="Inter" fontSize="25px" fontWeight="600">
-            Manufactured by:
+          <Text fontFamily="Inter" fontSize="24px" fontWeight="600">
+            Manufactured by :
           </Text>
+
           <Text fontFamily="Inter" fontSize="16px" my="15px">
             Sudarshan Consolidated Private Limited
           </Text>
           <Text fontFamily="Inter" fontSize="16px" my="15px">
-            <span style={{ fontWeight: "600", fontSize: "18px" }}>Address:</span> IGC Samba, Samba Jammu & Kashmir,<br />
-            <span style={{ fontWeight: "600", fontSize: "18px" }}>Pincode:</span> 184121
+            <Box as="span" fontWeight="600" fontSize="18px">Address :</Box>
+            <Box as="span" paddingLeft={["0rem", "1.5rem"]}>IGC Samba, Samba Jammu & Kashmir,</Box>
+            <Box as="span" display="block" paddingLeft={["0rem", "6.5rem"]} paddingTop="0.5rem">Pincode: 184121</Box>
+          </Text>
+
+          <Text fontFamily="Inter" fontSize="16px" my="15px">
+            <span style={{ fontWeight: "600", fontSize: "18px" }}>Email : </span>
+            <Box as="span" paddingLeft={["0rem", "2.5rem"]}>info@sclagro.com</Box>
+
           </Text>
           <Text fontFamily="Inter" fontSize="16px" my="15px">
-            <span style={{ fontWeight: "600", fontSize: "18px" }}>Email: </span> info@sclagro.com
-          </Text>
-          <Text fontFamily="Inter" fontSize="16px" my="15px">
-            <span style={{ fontWeight: "600", fontSize: "18px" }}>Website:</span> <Link href="https://www.sclagro.com" isExternal>www.sclagro.com</Link>
+            <span style={{ fontWeight: "600", fontSize: "18px" }}>Website :</span>
+            <Box as="span" paddingLeft={["0rem", "1.5rem"]}><Link href="https://www.sclagro.com" isExternal>www.sclagro.com</Link></Box>
+
           </Text>
           <HStack my="30px" fontSize="25px" spacing={5}>
             <Link href="https://www.instagram.com" isExternal><FaInstagram /></Link>

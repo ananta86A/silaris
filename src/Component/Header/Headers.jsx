@@ -40,7 +40,8 @@ const Headers = () => {
     return (
         <Box
             h="80px"
-            boxShadow="dark-lg"
+            //boxShadow="dark-lg"
+            borderBottom={'1px solid gray'}
             rounded="md"
             bg="white"
             my={["5px", "0px"]}
@@ -78,18 +79,34 @@ const Headers = () => {
                                 type="text"
                                 color="black"
                                 placeholder="Search..."
+                                border="none"
+                                borderBottom={"1px solid gray"}
+
                             />
                         </Box>
                     </HStack>
                 ) : (
-                    <Flex alignItems="center" w="100%">
+                    <Flex alignItems="center" w={["50%", "80%"]}>
                         <Input
-                            flex="1"
-                            borderRadius="20px"
-                            h="30px"
-                            type="text"
+
+                            borderRadius="0"
+                            border="none"
+                            borderBottom="2px solid"
+                            h={["30px", "30px"]}
                             color="black"
                             placeholder="Search..."
+                            _placeholder={{
+                                color: "gray.400",
+                                fontSize: "sm",
+                                position: "relative",
+                                bottom: "-5px",
+                            }}
+                            focusBorderColor="gray.500"
+                            sx={{
+                                '&::placeholder': {
+                                    bottom: '0px',
+                                },
+                            }}
                         />
                         <IconButton
                             aria-label="Open menu"
